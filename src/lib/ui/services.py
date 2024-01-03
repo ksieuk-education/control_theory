@@ -18,7 +18,7 @@ class UiService(pyqt6_qtwidgets.QMainWindow, ui_repositories.Ui_MainWindow):
         self.pb_calculate.clicked.connect(self.on_calculate)
         self.method_selected_model, self.method_selected = None, None
         self.text_entry.setText("Здесь будет результат работы программы")
-        self.cb_labs.addItems((f"Лабораторная работа №{i}" for i in range(1, self.settings.labs_count + 1)))
+        self.cb_labs.addItems((f"Лабораторная работа №{i}" for i in range(2, self.settings.labs_count + 2)))
         self.cb_labs.activated.connect(self.on_lab)
         self.lab_number = 1
         self.variant_number = 1
@@ -85,6 +85,10 @@ class UiService(pyqt6_qtwidgets.QMainWindow, ui_repositories.Ui_MainWindow):
         if self.input_data and self.input_data_method == self.method_title:
             values_default = list(self.input_data.model_dump().values())
         self.create_fields_input(titles, values_names, values_default)
+        if self.list_widget:
+            self.layout_output_pictures.removeWidget(self.list_widget)
+            self.list_widget.deleteLater()
+            self.list_widget = None
 
     def get_input_text(self) -> pydantic.BaseModel:
         if not self.method_selected_model:

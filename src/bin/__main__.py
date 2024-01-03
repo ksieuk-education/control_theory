@@ -18,7 +18,7 @@ def run() -> None:
 
 def main() -> None:
     # try:
-        run()
+    run()
         # exit(os.EX_OK)
     # except SystemExit:
     #     exit(os.EX_OK)

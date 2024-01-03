@@ -1,7 +1,6 @@
 import logging
 import logging.config as logging_config
 import sys
-import typing
 
 import PyQt6.QtWidgets as pyqt6_qtwidgets
 

@@ -21,7 +21,7 @@ readme = "README.md"
 packages = [{include = "system_reability_gui"}]
 
 [tool.poetry.dependencies]
-python = ">=3.12 <3.13"
+python = ">=3.12.1 <3.13"
 pyqt6 = "^6.5.3"
 numpy = "^1.26.1"
 matplotlib = "^3.8.0"
