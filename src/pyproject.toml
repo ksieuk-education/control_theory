@@ -1,0 +1,31 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+
+[tool.isort]
+known_first_party = ["lib", "bin"]
+line_length = 120
+profile = "black"
+py_version = "311"
+
+[tool.poetry]
+name = "system-reability-gui"
+version = "0.1.0"
+description = ""
+authors = ["ksieuk <iebebd3@gmail.com>"]
+readme = "README.md"
+packages = [{include = "system_reability_gui"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12 <3.13"
+pyqt6 = "^6.5.3"
+numpy = "^1.26.1"
+matplotlib = "^3.8.0"
+pydantic = "^2.4.2"
+pydantic-settings = "^2.0.3"
+scipy = "^1.11.4"
+pyinstaller = "^6.3.0"
