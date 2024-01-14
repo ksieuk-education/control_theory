@@ -180,7 +180,6 @@ class UiService(pyqt6_qtwidgets.QMainWindow, ui_repositories.Ui_MainWindow):
             graphs = methods_config.LAB_1_GRAPHS_1
         else:
             graphs = methods_config.LAB_1_GRAPHS_2
-        print(graphs[item.text()])
         graph = self.graphs[graphs[item.text()] - 1]
         graph_copy = graph.get_copy()
 
