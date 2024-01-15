@@ -1,11 +1,16 @@
 # Установка и запуск
 
-Необходим Python 3.12
+Необходим Python 3.11
 
 ```bash
 pip install poetry
-
+```
+```bash
+cd src
+```
+```bash
 poetry install
-
-python -m ./src/bin/
+```
+```bash
+python -m ./bin/
 ```
